@@ -6,7 +6,7 @@ def isPalindrome(s):
 
     return newstr == newstr[::-1]
 
-s = "racecar12"
-t = "racecar"
+s = "race car12"
+t = "racec ar"
 print(isPalindrome(s))
 print(isPalindrome(t))
