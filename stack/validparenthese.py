@@ -5,13 +5,13 @@ def isValid(s):
 
     for bracket in s:
         if bracket in pairs:  # bracket is a key
-            stack.append(bracket)
-        elif len(stack) == 0 or bracket != pairs[stack.pop()]:
+            stack.append(bracket) #if bracket exist, it will append to stack
+        elif len(stack) == 0 or bracket != pairs[stack.pop()]: #pop the latest string from stack and check its element
             return False
     return len(stack) == 0
 
 
-t = "((({{]})))"
+t = "({]})"
 s = "["
 
 print(isValid(t))
