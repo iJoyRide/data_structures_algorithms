@@ -1,13 +1,19 @@
 def maxProfit(prices): 
     
-    new_list = sorted(prices)
-    if prices[0] == new_list[-1]:
-        return 0
+    max_profit = 0
+    i = 0
+    left = i
+    right = i+1
     
-    left = 0
-    right = 
-
-
+    while left <= right:
+        if prices[left] >= prices[rught]
+            left += 1
+            right += 1
+        else 
+            
+        
+        
+        
 prices = [7,1,5,3,6,4]
 
 print(maxProfit(prices))
