@@ -1,4 +1,5 @@
 def mergeAlternately(word1, word2):
+    """Method 1"""
 
     # Initialise empty string
     merged = []
