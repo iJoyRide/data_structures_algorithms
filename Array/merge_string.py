@@ -22,8 +22,10 @@ def mergeAlternately(word1, word2):
     # single string with empty string, ['adbecf12345']
     return "".join(merged)
 
+    # Time: 0(N)
+    # Space: 0(N)
 
-print(mergeAlternately("abc", "def12345"))
 
-# Time: 0(N)
-# Space: 0(N)
+if __name__ == "__main__":
+    print(mergeAlternately("abc", "def12345"))
+
