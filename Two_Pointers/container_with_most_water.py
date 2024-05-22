@@ -1,5 +1,5 @@
 def maxArea(height):
-    """Method 1: My method"""
+    """Method 1"""
 
     # Initialize two pointers, one at the beginning (left) and one at the end (right) of the height array
     left = 0
