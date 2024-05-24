@@ -36,7 +36,8 @@ def longestOnes(nums, k):
         max_window_length = max(window_length, max_window_length)
 
     return max_window_length
-
+#Time: O(N)
+#Space: O(1)
 
 if __name__ == "__main__":
 
