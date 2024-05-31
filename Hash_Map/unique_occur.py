@@ -17,6 +17,24 @@ def uniqueOccurrences(arr):
     #Time: O(N)
     #Space: O(N^2)
 
+def uniqueOccurrencesTwo(arr):
+    hashmap = {}  # Initialize an empty hashmap to store the counts of occurrences
+    
+    for i in arr:  # Iterate over each element in the input array
+        if i in hashmap:  # Check if the element is already in the hashmap
+            hashmap[i] += 1  # If so, increment its count
+        else:
+            hashmap[i] = 1  # If not, set its count to 1
+        
+    setx = set(hashmap.values())  # Create a set containing the values (counts) from the hashmap
+    print(hashmap, setx)  # Print the hashmap and the set of values
+    
+    return len(hashmap) == len(setx)  # Check if the number of unique elements in the hashmap is equal to the number of unique counts
+
+    #Time: O(N)
+    #Space: O(N)
+
 if __name__ == "__main__":
     arr = [1, 2, 2, 1, 1, 3]
     print(uniqueOccurrences(arr))
+    print(uniqueOccurrencesTwo(arr))
