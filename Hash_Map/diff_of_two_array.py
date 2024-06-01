@@ -25,12 +25,29 @@ def find_unique_elements(nums1, nums2):
 #Time: O(N)
 #Space: O(N+M)
 
+def find_unique_elements2(nums1, nums2):
+    """Method 2"""
+    
+    set1 = set()
+    set2 = set()
+
+    for i in nums1:
+        if i not in nums2:
+            set1.add(i)
+
+    for i in nums2:
+        if i not in nums1:
+            set2.add(i)
+
+    return set1, set2
+    
+#Time: O(N)
+#Space: O(N+M)
+
 if __name__ == "__main__":
     nums1 = [1,2,3] 
     nums2 = [2,4,6]
-    nums3 = [1, 2, 3, 3]
-    nums4 = [1, 1, 2, 2]
 
     print(find_unique_elements(nums1, nums2))
-    print(find_unique_elements(nums3, nums4))
+    print(find_unique_elements2(nums1, nums2))
 
