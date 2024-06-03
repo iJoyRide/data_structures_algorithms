@@ -52,6 +52,9 @@ def maxVowels2(s, k):
 
     return max_vows
 
+#Time = O(N)
+#Space = O(1)
+
 
 if __name__ == "__main__":
 
@@ -63,5 +66,3 @@ if __name__ == "__main__":
     k2 = 3
     print(maxVowels2(s2, k2))
 
-#Time = O(N)
-#Space = O(1)
