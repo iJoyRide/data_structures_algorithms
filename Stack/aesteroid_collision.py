@@ -4,7 +4,7 @@ def collision(asteroids):
     
     # Iterate through each asteroid
     for aes in asteroids:
-        # Check if the current asteroid is moving left and there are asteroids moving right
+        # Check if stack has element and the current asteroid is moving left and there are asteroids moving right
         while stack and aes < 0 and stack[-1] > 0:
             # Calculate the collision between the current asteroid and the top asteroid in the stack
             diff = aes + stack[-1]
