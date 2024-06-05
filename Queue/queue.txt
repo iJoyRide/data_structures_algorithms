@@ -1,0 +1,1 @@
+Queue: Last In Last Out (LILO): The last object or item in a queue is the last object or item to leave the queue.

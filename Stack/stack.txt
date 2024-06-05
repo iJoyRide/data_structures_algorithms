@@ -1,0 +1,1 @@
+Stack: First In Last Out (FILO): The first object or item in a stack is the last object or item to leave the stack.
