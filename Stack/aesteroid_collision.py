@@ -32,5 +32,6 @@ def collision(asteroids):
 #Time: O(1) + O(1)
 #Space: O(N)
 
-asteroids = [8, -8]
-print(collision(asteroids))
+if __name__ == "__main__":
+    asteroids = [8, -8]
+    print(collision(asteroids))
