@@ -14,15 +14,20 @@ def create_linked_list(values):
 
 # Solution
 def reverseList(head):
-    prev, curr = None, head
+    prev = None
+    temp = head
     
-    while curr:
-        nxt = curr.next
-        curr.next = prev
-        prev = curr
-        curr = nxt
+    while temp:
         
+        front = temp.next
+        temp.next = prev
+        prev = temp
+        temp = front
+    
     return prev
+
+# Time = O(N)
+# Space = O(1)
 
 if __name__ == "__main__":
     values = [1, 2, 3, 4, 5]
