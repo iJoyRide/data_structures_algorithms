@@ -14,41 +14,47 @@ def create_linked_list(values):
 
 # Solution
 def reverseList(head):
-    """Iterative"""
-
+    """Iterative approach to reverse a linked list."""
+    
+    # Initialize pointers
     prev = None
     temp = head
     
+    # Check if the list is empty or has only one element
     if head == None or head.next == None:
         return temp
-    while temp:
-        
-        front = temp.next
-        temp.next = prev
-        prev = temp
-        temp = front
     
-    return prev
+    # Iterate through the list and reverse the pointers
+    while temp:
+        front = temp.next  # Store the next node temporarily
+        temp.next = prev   # Reverse the pointer
+        prev = temp        # Move prev pointer forward
+        temp = front       # Move temp pointer forward
+    
+    return prev  # Return the new head of the reversed list
 
-# Time = O(N)
-# Space = O(1)
+# Time complexity: O(N)
+# Space complexity: O(1)
 
 def reverseListRec(head):
-    """Recursive"""
-
-    # head is passed as cur, and None is passed as prev
+    """Recursive approach to reverse a linked list."""
+    
+    # Recursive function to reverse the list
     def reverse(temp, prev):
+        # Base case: if the current node is None, return the previous node
         if temp is None:
             return prev
         else:
-            front = temp.next
-            temp.next = prev
-            return reverse(front, temp)
+            front = temp.next     # Store the next node temporarily
+            temp.next = prev     # Reverse the pointer
+            return reverse(front, temp)  # Recur with updated pointers
 
+    # Start the recursion with the head of the original list and None as the previous node
     return reverse(head, None)
 
-# Time = O(N)
-# Space = O(1)
+# Time complexity: O(N)
+# Space complexity: O(N) due to recursion stack
+
 
 if __name__ == "__main__":
     values = [1, 2, 3, 4, 5]
