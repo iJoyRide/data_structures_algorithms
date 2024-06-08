@@ -16,7 +16,7 @@ def maxProductHeap(nums):
     return (largest[0] - 1) * (largest[1] - 1)
 
 
-# Time complexity: O(N log N)
+# Time complexity: O(N)
 # Space complexity: O(N)
 
 if __name__ == "__main__":
