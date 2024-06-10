@@ -10,6 +10,6 @@ def totalCost(costs, k, candidates):
 if __name__ == "__main__":
     k = 3
     costs = [17, 12, 10, 2, 7, 2, 11, 20, 8]
-    candidates = 3
+    candidates = 5
     
     print(totalCost(costs, k, candidates))
