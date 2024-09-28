@@ -12,15 +12,7 @@ tests = [
     {"input": {"cards": list(range(10000000, 0, -1)), "query": 2},"output": 9999998,},
 ]
 
-#Linear Search 
-def linear_locate_card(cards, query):
-    
-    for position in range(len(cards)):
-        if cards[position] == query:
-            return position
-        position += 1
-    return -1
-
+#Binary Search
 def binary_locate_card(cards, query):
     lo = 0
     hi = len(cards) - 1
