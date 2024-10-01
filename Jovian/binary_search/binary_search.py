@@ -9,7 +9,7 @@ tests = [
     # {"input": {"cards": [9, 7, 5, 2, -9], "query": 4}, "output": -1},
     # {"input": {"cards": [], "query": 7}, "output": -1},
     # {"input": {"cards": [8, 8, 6, 6, 6, 6, 6, 3, 2, 2, 2, 0, 0, 0], "query": 3},"output": 7,},
-    {"input": {"cards": list(range(10000000, 0, -1)), "query": 2},"output": 9999998,},
+    {"input": {"cards": list(range(1, 10000000, 1)), "query": 2},"output": 1,},
 ]
 
 #Binary Search
@@ -24,13 +24,13 @@ def binary_locate_card(cards, query):
         if mid_val == query:
             return mid
         elif mid_val < query:
-            hi = mid -1
-        else:
             lo = mid +1
+        else:
+            hi = mid -1
     return -1
         
 
 if __name__ == "__main__":
     for test in tests:
-        evaluate_test_case(linear_locate_card, test)
+        #evaluate_test_case(linear_locate_card, test)
         evaluate_test_case(binary_locate_card, test)
