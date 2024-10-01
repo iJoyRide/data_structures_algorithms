@@ -7,6 +7,7 @@ tests = [
     {'input': {'nums': [7, 3, 5]},'output': 1},
     {'input': {'nums': []},'output': -1},
     {'input': {'nums': [5]},'output': 0}, 
+    {'input': {'nums': [1, 2, 3, 4, 5, -1, 0]},'output': 5}, 
 ]
 def count_rotations(nums):    
     if not nums:
